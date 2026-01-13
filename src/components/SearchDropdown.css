@@ -1,0 +1,42 @@
+.search-dropdown {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  z-index: 999;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.search-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 14px;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  transition: background 0.2s ease;
+}
+
+.search-item:hover {
+  background: #fff0f4;
+}
+
+.search-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.search-item .name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.search-item .price {
+  font-size: 13px;
+  color: #7a0f2b;
+}

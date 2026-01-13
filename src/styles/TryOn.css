@@ -1,0 +1,46 @@
+.tryon-page {
+  padding: 40px;
+  background: #fff5f7;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.tryon-stage {
+  position: relative;
+  width: 320px;
+  margin: 30px auto;
+}
+
+.face-img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* 🔥 FIXED LIP POSITION */
+.lip-overlay {
+  position: absolute;
+  top: 58%;          /* ⬅ relative to face */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 26px;
+  border-radius: 20px;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.shade-picker {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.shade-picker button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}

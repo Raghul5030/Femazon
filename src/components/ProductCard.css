@@ -1,0 +1,48 @@
+.luxury-card { cursor: pointer; }
+
+.viewport-3-4 {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+.hover-action {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: var(--transition);
+}
+
+.luxury-card:hover .hover-action {
+  transform: translateY(0);
+}
+
+.quick-btn {
+  width: 100%;
+  background: white;
+  color: black;
+  border: none;
+  padding: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-meta { padding: 15px 0; }
+.meta-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; }
+.meta-cat { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); margin-top: 5px; }

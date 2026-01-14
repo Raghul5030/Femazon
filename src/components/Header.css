@@ -1,44 +1,105 @@
-.header {
+/* Header.css - Luxury Navigation Styles */
+
+.header-container {
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 0;
+}
+
+.inner-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 30px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
 }
 
-.logo h2 {
-  margin: 0;
-  color: #7a0f2b;
+.logo-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.logo span {
-  font-size: 12px;
-  color: #777;
+.logo-text {
+  font-size: 26px;
+  font-weight: 700;
+  color: #7b1e3c;
+  font-family: 'Playfair Display', serif;
 }
 
-.search {
-  width: 40%;
-  padding: 10px 14px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
+.tagline-text {
+  font-size: 10px;
+  font-weight: 400;
+  color: #888;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.search-input {
+  width: 35%;
+  padding: 10px 18px;
+  border-radius: 99px;
+  border: 1px solid #eee;
+  background: #fcfcfc;
   outline: none;
+  font-size: 13px;
+  transition: all 0.3s ease;
 }
 
-nav a {
-  margin-left: 20px;
+.search-input:focus {
+  border-color: #7b1e3c;
+  background: #fff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-btn {
   text-decoration: none;
-  color: #333;
+  font-size: 11px;
   font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-nav a.active {
-  color: #7a0f2b;
+.nav-btn:hover {
+  background: #f9f9f9;
+  color: #7b1e3c;
+  transform: translateY(-1px);
 }
 
-.bag {
-  background: #7a0f2b;
+.nav-btn.active {
+  background: #7b1e3c;
+  color: white;
+  border-color: #7b1e3c;
+  box-shadow: 0 4px 12px rgba(123, 30, 60, 0.2);
+}
+
+.bag-btn-custom {
+  background: #000;
   color: white !important;
-  padding: 8px 14px;
-  border-radius: 20px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: none;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 8px;
+}
+
+.bag-btn-custom:hover {
+  background: #7b1e3c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

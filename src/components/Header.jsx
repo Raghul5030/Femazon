@@ -1,27 +1,36 @@
 import { NavLink } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
   return (
-    <header style={headerStyles}>
-      <div className="main-container" style={innerHeaderStyles}>
-        <div style={logo}>
-          Femazon
-          <span style={tagline}>Luxury Beauty & Fashion</span>
+    <header className="header-container">
+      <div className="main-container inner-header">
+        <div className="logo-container">
+          <span className="logo-text">Femazon</span>
+          <span className="tagline-text">Luxury Beauty & Fashion</span>
         </div>
 
         <input
           type="text"
           placeholder="Search for makeup, skincare, brands..."
-          style={search}
+          className="search-input"
         />
 
-        <nav style={nav}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/products">Products</NavLink>
-          <NavLink to="/wishlist">Wishlist</NavLink>
-          <NavLink to="/tryon">AI Try-On</NavLink>
+        <nav className="nav-links">
+          <NavLink to="/" className="nav-btn">
+            Home
+          </NavLink>
+          <NavLink to="/products" className="nav-btn">
+            Products
+          </NavLink>
+          <NavLink to="/wishlist" className="nav-btn">
+            Wishlist
+          </NavLink>
+          <NavLink to="/tryon" className="nav-btn">
+            AI Try-On
+          </NavLink>
           <NavLink to="/cart">
-            <button>Bag</button>
+            <button className="bag-btn-custom">Bag</button>
           </NavLink>
         </nav>
       </div>
@@ -29,46 +38,3 @@ export default function Header() {
   );
 }
 
-/* STYLES */
-const headerStyles = {
-  background: "white",
-  boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
-  position: "sticky",
-  top: 0,
-  zIndex: 100,
-};
-
-const innerHeaderStyles = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  paddingTop: 16,
-  paddingBottom: 16,
-};
-
-const logo = {
-  fontSize: 26,
-  fontWeight: 700,
-  color: "#7b1e3c",
-};
-
-const tagline = {
-  display: "block",
-  fontSize: 12,
-  fontWeight: 400,
-  color: "#777",
-};
-
-const search = {
-  width: "35%",
-  padding: "10px 16px",
-  borderRadius: 999,
-  border: "1px solid #ddd",
-  outline: "none",
-};
-
-const nav = {
-  display: "flex",
-  alignItems: "center",
-  gap: 20,
-};
